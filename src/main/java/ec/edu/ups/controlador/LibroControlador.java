@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
 import ec.edu.ups.datos.LibroDAO;
@@ -14,6 +15,7 @@ import ec.edu.ups.modelo.Libro;
 public class LibroControlador {
 private Libro libro;
 private List<Libro>libros;
+
 @Inject
 private LibroDAO ldao;
 
@@ -42,16 +44,6 @@ public List<Libro> getLibros() {
 
 public void setLibros(List<Libro> libros) {
 	this.libros = libros;
-}
-
-
-public LibroDAO getLdao() {
-	return ldao;
-}
-
-
-public void setLdao(LibroDAO ldao) {
-	this.ldao = ldao;
 }
 
 public String guardarLibro() {

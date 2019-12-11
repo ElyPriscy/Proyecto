@@ -5,50 +5,74 @@
       xmlns:h="http://java.sun.com/jsf/html"> 
 
 <h:head></h:head> 
-<body> 
+<h:body> 
  
 
 <h:form>
-<h:commandButton action="#{libroControlador.addCategorias()}" value="+Categorias" />
-ISBN:
-<h:inputText value="#{libroControlador.libro.isbn}" />
-Titulo:
-<h:inputText value="#{libroControlador.libro.titulo}" />
-Autor:
-<h:inputText value="#{libroControlador.libro.autor}" />
-Año:
-<h:inputText value="#{libroControlador.libro.anio}" />
-Editorial:
-<h:inputText value="#{libroControlador.libro.editorial}" />
-Cantidad:
-<h:inputText value="#{libroControlador.libro.cantidad}" />
-ImagenS:
-<h:inputText value="#{libroControlador.libro.imagenS}" />
-ImagenM:
-<h:inputText value="#{libroControlador.libro.imagenM}" />
-iImagenL:
-<h:inputText value="#{libroControlador.libro.imagenG}" />
+<h:panelGrid columns="3">    
 
-<h:commandButton action="#{libroControlador.guardarLibro()}" value="Guardar" />
+<h:outputLabel value="Titulo" for="titulo" />
+<h:inputText id="titulo" value="#{libroControlador.libro.titulo}" />
+<h:message for="titulo"/>
 
-<h:dataTable values="#{libroControlador.libro.categorias}" var="categoria">
+<h:outputLabel value="Autor" for="autor" />
+<h:inputText id="autor" value="#{libroControlador.libro.autor}" />
+<h:message for="autor"/>
+
+<h:outputLabel value="Año" for="anio" />
+<h:inputText id="anio" value="#{libroControlador.libro.anio}" />
+<h:message for="anio"/>
+
+<h:outputLabel value="Editorial" for="editorial" />
+<h:inputText id="edi" value="#{libroControlador.libro.editorial}" />
+<h:message for="edi"/>
+<h:outputLabel value="Cantidad" for="cantidad" />
+<h:inputText id="can" value="#{libroControlador.libro.cantidad}" />
+<h:message for="can"/>
+
+<h:outputLabel value="ImagenS" for="s" />
+<h:inputText id="is" value="#{libroControlador.libro.imagenS}" />
+<h:message for="is"/>
+
+<h:outputLabel value="ImagenM" for="m" />
+<h:inputText id="im" value="#{libroControlador.libro.imagenM}" />
+<h:message for="im"/>
+
+<h:outputLabel value="ImagenL" for="l" />
+<h:inputText id="il" value="#{libroControlador.libro.imagenG}" />
+<h:message for="il"/>
+</h:panelGrid>
+
+
+
+</h:form>
+
+<h:form>
+<h:panelGrid columns="3"> 
+<h:dataTable value="#{libroControlador.libro.categorias}" var="lib">
 <h:column>
 <f:facet name="header">Codigo</f:facet>
-<h:inputText value="categoria.codigo" />
+<h:inputText value="#{lib.categoriaID}" />
 </h:column>
 
 <h:column>
 <f:facet name="header">Nombre</f:facet>
-<h:inputText value="categoria.nombre" />
+<h:inputText value="#{lib.nombre}" />
 </h:column>
 
 <h:column>
 <f:facet name="header">Descripcion</f:facet>
-<h:inputText value="categoria.codigo" />
+<h:inputText value="#{lib.descripcion}" />
 </h:column>
-
-
 </h:dataTable>
+<h:commandButton action="#{libroControlador.addCategorias()}" value="Categorias" />
+
+</h:panelGrid>
 </h:form>
-</body> 
+<h:form>
+<h:panelGrid columns="2"> 
+<h:commandButton action="#{libroControlador.guardarLibro()}" value="Guardar" />
+</h:panelGrid>
+</h:form>
+</h:body> 
 </html>
