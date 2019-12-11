@@ -24,7 +24,7 @@ public class Libro {
 	private String imagenS;
 	private String imagenM;
 	private String imagenG;
-	@OneToMany(cascade= {CascadeType.ALL})
+	@OneToMany(cascade= {CascadeType.ALL}, fetch = FetchType.EAGER)
 	@JoinColumn(name = "libro", referencedColumnName = "isbn")
 	//@JoinColumn(name="libro")
 	private List<Categoria> categorias;

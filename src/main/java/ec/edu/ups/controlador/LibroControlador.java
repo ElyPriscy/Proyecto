@@ -72,5 +72,8 @@ public String listarLibro() {
 	ldao.leerLibro(libro.getIsbn());
 	return null;
 }
-
+public String addCategorias() {
+	libro.addCategorias(new Categoria());
+	return null;
+}
 }
