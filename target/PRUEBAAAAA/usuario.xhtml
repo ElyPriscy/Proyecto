@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+ 
+<h:head>
+<link href="/Vehiculo/estilos.css" rel="stylesheet" type="text/css" />
+
+</h:head> 
+<body> 
+<h1>Mantenimiento Usuarios</h1>
+
+<h:form>
+UserID:
+<h:inputText id="id" value="#{usuarioControlador.usuario.userID}"/>
+Nombre:
+<h:inputText id="nombre" value="#{usuarioControlador.usuario.nombre}"/>
+Apellido:
+<h:inputText id="apellido" value="#{usuarioControlador.usuario.apellido}"/>
+Direccion:
+<h:inputText id="direccion" value="#{usuarioControlador.usuario.direccion}"/>
+Edad:
+<h:inputText id="edad" value="#{usuarioControlador.usuario.edad}"/>
+Rol:
+<h:inputText id="rol" value="#{usuarioControlador.usuario.rol}"/>
+<h:commandButton value="Guardar" action="#{usuarioControlador.guardarUusuario()}">
+</h:commandButton>
+
+
+</h:form>
+
+</body> 
+</html>

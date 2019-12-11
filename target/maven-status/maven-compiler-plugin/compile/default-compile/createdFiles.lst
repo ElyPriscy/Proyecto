@@ -1,0 +1,17 @@
+ec\edu\ups\controlador\CategoriaControlador.class
+ec\edu\ups\modelo\Usuario_.class
+ec\edu\ups\datos\CategoriaDAO.class
+ec\edu\ups\util\Resourse.class
+ec\edu\ups\controlador\LibroControlador.class
+ec\edu\ups\modelo\Libro_.class
+ec\edu\ups\datos\UsuarioDAO.class
+ec\edu\ups\modelo\Libro.class
+ec\edu\ups\modelo\Categoria_.class
+ec\edu\ups\datos\VotoDAO.class
+ec\edu\ups\modelo\Voto_.class
+ec\edu\ups\datos\LibroDAO.class
+ec\edu\ups\modelo\Usuario.class
+ec\edu\ups\controlador\UsuarioControlador.class
+ec\edu\ups\modelo\Voto.class
+ec\edu\ups\controlador\VotoControlador.class
+ec\edu\ups\modelo\Categoria.class

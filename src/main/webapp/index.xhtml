@@ -31,7 +31,7 @@ iImagenL:
 
 <h:commandButton action="#{libroControlador.guardarLibro()}" value="Guardar" />
 
-<h:dataTable values="#{libroControlador.libro.categorias}" var="categoria">
+<h:dataTable value="#{libroControlador.libro.categorias}" var="categoria">
 <h:column>
 <f:facet name="header">Codigo</f:facet>
 <h:inputText value="categoria.codigo" />
