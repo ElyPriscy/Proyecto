@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+ 
+
+<h:form>
+ISBN:
+<h:inputText value="#{libroControlador.libro.isbn}" />
+Titulo:
+<h:inputText value="#{libroControlador.libro.titulo}" />
+Autor:
+<h:inputText value="#{libroControlador.libro.autor}" />
+Año:
+<h:inputText value="#{libroControlador.libro.anio}" />
+Editorial:
+<h:inputText value="#{libroControlador.libro.editorial}" />
+Cantidad:
+<h:inputText value="#{libroControlador.libro.cantidad}" />
+ImagenS:
+<h:inputText value="#{libroControlador.libro.imagenS}" />
+ImagenM:
+<h:inputText value="#{libroControlador.libro.imagenM}" />
+iImagenL:
+<h:inputText value="#{libroControlador.libro.imagenG}" />
+
+<h:commandButton action="#{libroControlador.guardarLibro()}" value="Guardar" />
+</h:form>
+
+
+</body> 
+</html>

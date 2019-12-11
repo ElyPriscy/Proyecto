@@ -21,7 +21,7 @@ public class Libro {
 	private int isbn;
 	private String titulo;
 	private String autor; 
-	private String año;
+	private String anio;
 	private String editorial;
 	private int cantidad; 
 	private String imagenS;
@@ -34,8 +34,6 @@ public class Libro {
 	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "votos")
 	private List<Voto>votos;
-	
-	
 	public int getIsbn() {
 		return isbn;
 	}
@@ -54,11 +52,11 @@ public class Libro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	public String getAño() {
-		return año;
+	public String getAnio() {
+		return anio;
 	}
-	public void setAño(String año) {
-		this.año = año;
+	public void setAnio(String año) {
+		this.anio = anio;
 	}
 	public String getEditorial() {
 		return editorial;
@@ -90,30 +88,21 @@ public class Libro {
 	public void setImagenG(String imagenG) {
 		this.imagenG = imagenG;
 	}
-//	public List<Categoria> getCategorias() {
-//		return categorias;
-//	}
-//	public void setCategorias(List<Categoria> categorias) {
-//		this.categorias = categorias;
-//	}
-//	public void addCategoria(Categoria categoria) {
-//		if(categorias==null) {
-//			categorias = new ArrayList<>();
-//			categorias.add(categoria); 
-//	}
-		
-	//}
-	@Override
-	public String toString() {
-		return "Libro [isbn=" + isbn + ", titulo=" + titulo + ", autor=" + autor + ", año=" + año + ", editorial="
-				+ editorial + ", cantidad=" + cantidad + ", imagenS=" + imagenS + ", imagenM=" + imagenM + ", imagenG="
-				+ imagenG + ", categorias=" + "]";
+	public List<Categoria> getCategorias() {
+		return categorias;
 	}
-
+	public void setCategorias(List<Categoria> categorias) {
+		this.categorias = categorias;
+	}
+	public List<Voto> getVotos() {
+		return votos;
+	}
+	public void setVotos(List<Voto> votos) {
+		this.votos = votos;
+	}
 	
 	
 	
-
 	
 
 }
