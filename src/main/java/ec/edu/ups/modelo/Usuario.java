@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -15,12 +16,13 @@ import javax.persistence.Table;
 @Table(name = "Usuarios")
 public class Usuario {
 	@Id
+	@GeneratedValue
 	private int userID;
 	private String nombre;
 	private String apellido;
 	private String direccion; 
 	private int edad;
-	private boolean rol;
+	private int rol;
 	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "votos")
 	private List<Voto>votos;
@@ -55,11 +57,21 @@ public class Usuario {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	public boolean isRol() {
+	
+	public int getRol() {
 		return rol;
 	}
-	public void setRol(boolean rol) {
+	public void setRol(int rol) {
 		this.rol = rol;
+	}
+	public List<Voto> getVotos() {
+		return votos;
+	}
+	public void setVotos(List<Voto> votos) {
+		this.votos = votos;
+	}
+	public int getUserID() {
+		return userID;
 	}
 	@Override
 	public String toString() {

@@ -2,6 +2,7 @@ package ec.edu.ups.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -12,6 +13,7 @@ import javax.validation.constraints.NotNull;
 @Table(name="Categoria")
 public class Categoria {
 	@Id
+	@GeneratedValue
 	private int CategoriaID;
 	private String nombre;
 	private String descripcion;
