@@ -21,7 +21,7 @@ private LibroDAO ldao;
 @PostConstruct
 public void init() {
 	libro= new Libro();
-//	libro.addCategoria(new Categoria());
+	libro.addCategorias(new Categoria());
 }
 
 

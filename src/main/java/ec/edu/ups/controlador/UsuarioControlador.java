@@ -9,8 +9,6 @@ import javax.faces.bean.ManagedBean;
 import javax.inject.Inject;
 
 import ec.edu.ups.datos.UsuarioDAO;
-import ec.edu.ups.modelo.Categoria;
-import ec.edu.ups.modelo.Libro;
 import ec.edu.ups.modelo.Usuario;
 
 @ManagedBean

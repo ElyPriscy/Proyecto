@@ -4,15 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name ="Libros")
@@ -55,7 +52,7 @@ public class Libro {
 	public String getAnio() {
 		return anio;
 	}
-	public void setAnio(String año) {
+	public void setAnio(String anio) {
 		this.anio = anio;
 	}
 	public String getEditorial() {
@@ -101,8 +98,12 @@ public class Libro {
 		this.votos = votos;
 	}
 	
+	public void addCategorias(Categoria categoria) {
+		if(categorias==null) {
+			categorias= new ArrayList<>();
+			categorias.add(categoria);
+		}
 	
 	
-	
-
+	}
 }

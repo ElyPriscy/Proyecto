@@ -1,5 +1,7 @@
 package ec.edu.ups.datos;
 
+import java.util.ArrayList;
+
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -29,6 +31,9 @@ public class LibroDAO {
 		em.find(Libro.class, isbn);
 		return null;
 }
+	
+		
+	
 	
 
 }
