@@ -1,5 +1,5 @@
 # Proyecto interciclo de  Proyectos de software y aplicaciones distribuidas 
-Elizbhet Uyaguari
+Elizabeth Uyaguari
 Braulio Castro
 
 DIAGRAMA DE CLASES 
