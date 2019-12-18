@@ -6,10 +6,8 @@
 
 <h:head></h:head> 
 <body> 
-
-UserID:
-
-<h:inputText id="id" value="#{usuarioControlador.usuario.userID}"/>
+<h:form>
+<h:panelGrid columns="1"> 
 Nombre:
 <h:inputText id="nombre" value="#{usuarioControlador.usuario.nombre}"/>
 Apellido:
@@ -18,9 +16,9 @@ Direccion:
 <h:inputText id="direccion" value="#{usuarioControlador.usuario.direccion}"/>
 Edad:
 <h:inputText id="edad" value="#{usuarioControlador.usuario.edad}"/>
-Rol:
-<h:inputText id="rol" value="#{usuarioControlador.usuario.rol}"/>
-<h:commandButton value="Guardar" action="#{usuarioControlador.guardarUusuario()}">
-</h:commandButton>
+<h:commandButton value="Guardar" action="#{usuarioControlador.guardarUusuario()}" onclick="return confirm('Seguro que desea Guardar?')"/>
+</h:panelGrid>
+</h:form>
+
 </body> 
 </html>

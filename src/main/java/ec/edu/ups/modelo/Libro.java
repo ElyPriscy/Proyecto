@@ -106,6 +106,6 @@ public class Libro {
 			categorias.add(categoria);
 		}
 	
-	
 	}
+	
 }

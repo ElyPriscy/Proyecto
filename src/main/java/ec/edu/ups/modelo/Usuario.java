@@ -26,7 +26,7 @@ public class Usuario {
 	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "votos")
 	private List<Voto>votos;
-	
+//	
 	public int getUserId() {
 		return userID;
 	}

@@ -18,9 +18,9 @@ public class Categoria {
 	private String nombre;
 	private String descripcion;
 
-//	@OneToOne
-//	@JoinColumn(name="libro")
-//	private Libro libro;
+	@OneToOne
+	@JoinColumn(name="libro")
+	private Libro libro;
 	
 	public int getCategoriaID() {
 		return CategoriaID;
@@ -39,6 +39,12 @@ public class Categoria {
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+	public Libro getLibro() {
+		return libro;
+	}
+	public void setLibro(Libro libro) {
+		this.libro = libro;
 	}
 	
 	

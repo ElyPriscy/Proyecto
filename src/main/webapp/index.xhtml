@@ -41,42 +41,11 @@
 <h:outputLabel value="ImagenL" for="l" />
 <h:inputText id="il" value="#{libroControlador.libro.imagenG}" />
 <h:message for="il"/>
-</h:panelGrid>
-
-
-
-<<<<<<< HEAD
-<h:dataTable value="#{libroControlador.libro.categorias}" var="categoria">
-=======
-</h:form>
-
-<h:form>
-<h:panelGrid columns="3"> 
-<h:dataTable value="#{libroControlador.libro.categorias}" var="lib">
->>>>>>> cd62a4b21b61620781e33947bcb851e820b2fbc3
-<h:column>
-<f:facet name="header">Codigo</f:facet>
-<h:inputText value="#{lib.categoriaID}" />
-</h:column>
-
-<h:column>
-<f:facet name="header">Nombre</f:facet>
-<h:inputText value="#{lib.nombre}" />
-</h:column>
-
-<h:column>
-<f:facet name="header">Descripcion</f:facet>
-<h:inputText value="#{lib.descripcion}" />
-</h:column>
-</h:dataTable>
-<h:commandButton action="#{libroControlador.addCategorias()}" value="Categorias" />
-
-</h:panelGrid>
-</h:form>
-<h:form>
-<h:panelGrid columns="2"> 
 <h:commandButton action="#{libroControlador.guardarLibro()}" value="Guardar" />
 </h:panelGrid>
+
+
 </h:form>
+
 </h:body> 
 </html>
